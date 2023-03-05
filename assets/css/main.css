@@ -8,6 +8,16 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+:root {
+	--border: 12px;
+	--color1: #6be89b;
+	--color2: #0076a5;
+	--from1: 30deg;
+	--distance1: 45%;
+	--from2: 210deg;
+	--distance2: 41%;
+  }
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -3014,7 +3024,7 @@ input, select, textarea {
 
 		.features article {
 			padding: 1.75em 1.75em 0.1em 1.75em ;
-			background-color: #353849;
+			background-color: #2a2e31;
 			border-radius: 5px;
 			margin: 1.5em 3em 1.5em 0;
 			width: calc(50% - 1.5em);
@@ -3085,7 +3095,7 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out;
-		background-color: rgba(53, 56, 73, 0.95);
+		background-color: rgba(42, 46, 49, 0.95);
 		height: 3.5em;
 		left: 0;
 		line-height: 3.5em;
@@ -3110,6 +3120,8 @@ input, select, textarea {
 
 			#header h1 a {
 				border: 0;
+				font-family: Inter, sans-serif;
+				font-size: x-large;
 			}
 
 		#header nav {
@@ -3290,7 +3302,7 @@ input, select, textarea {
 			-ms-transition: opacity 0.35s ease, -ms-transform 0.35s ease;
 			transition: opacity 0.35s ease, transform 0.35s ease;
 			-webkit-overflow-scrolling: touch;
-			background: #4c5c96;
+			background: #509dd3;
 			border-radius: 5px;
 			display: block;
 			max-width: 100%;
@@ -3346,7 +3358,7 @@ input, select, textarea {
 				}
 
 					#menu .links li a:hover {
-						background: #45558d;
+						background: #0a64a4;
 					}
 
 		@media screen and (max-width: 736px) {
@@ -3635,21 +3647,21 @@ input, select, textarea {
 	}
 
 	.wrapper {
-		background-color: #2e3141;
+		background-color: #31343b;
 		margin: 6.5em 0;
 		position: relative;
 	}
 
 		.wrapper:before, .wrapper:after {
-			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%232e3141%3B' /%3E%3C/svg%3E");
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%2331343b%3B' /%3E%3C/svg%3E");
 		}
 
 		.wrapper:before {
-			box-shadow: inset 0 -1px 0 0 #2e3141, 0 1px 0 0 #2e3141;
+			box-shadow: inset 0 -1px 0 0 #31343b, 0 1px 0 0 #31343b;
 		}
 
 		.wrapper:after {
-			box-shadow: inset 0 -1px 0 0 #2e3141, 0 1px 0 0 #2e3141;
+			box-shadow: inset 0 -1px 0 0 #31343b, 0 1px 0 0 #31343b;
 		}
 
 		.wrapper:before, .wrapper:after {
@@ -3814,7 +3826,59 @@ input, select, textarea {
 				overflow: hidden;
 				-ms-flex: 1;
 			}
+			.wrapper.spotlight .image::before {
+				content: '';
+				border-radius: 999px;
+				display: block;
+				position: absolute;
+				top: -13px;
+				left: 0;
+				height: 106%;
+				width: 100%;
+				background: conic-gradient(
+				  from var(--from2),
+				  var(--color2),
+				  var(--color1) var(--distance2),
+				  transparent var(--distance2)
+				);
+				-webkit-mask: radial-gradient(
+				  farthest-side,
+				  transparent calc(100% - var(--border)),
+				  #fff calc(100% - var(--border) - 1px)
+				);
+				mask: radial-gradient(
+				  farthest-side,
+				  transparent calc(100% - var(--border)),
+				  #fff calc(100% - var(--border) + 1px)
+				)
+			}
 
+			.wrapper.spotlight .image::after {
+				content: '';
+				border-radius: 999px;
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 105%;
+				width: 100%;
+				background: conic-gradient(
+				  from var(--from1),
+				  var(--color1),
+				  var(--color2) var(--distance1),
+				  transparent var(--distance1)
+				);
+				-webkit-mask: radial-gradient(
+				  farthest-side,
+				  transparent calc(100% - var(--border)),
+				  #fff calc(100% - var(--border) + 1px)
+				);
+				mask: radial-gradient(
+				  farthest-side,
+				  transparent calc(100% - var(--border)),
+				  #fff calc(100% - var(--border) + 1px)
+				)
+			}
 				.wrapper.spotlight .image img {
 					border-radius: 100%;
 					width: 100%;
