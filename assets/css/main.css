@@ -3,7 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
-@import url("assets/webfonts/style.css");
+
+@font-face {
+	font-family: "Nerik";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Nerik-normal"), url("assets/webfonts/Nerik-normal.ttf") format("ttf");
+}
 
 /*
 	Solid State by HTML5 UP
@@ -262,6 +268,12 @@ input, select, textarea {
 
 	p {
 		margin: 0 0 2em 0;
+		font-family: Whitney, sans-serif;
+	}
+
+	h1 {
+		font-size: 4em;
+		font-family: Nerik, sans-serif;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -3125,7 +3137,7 @@ input, select, textarea {
 
 			#header h1 a {
 				border: 0;
-				font-family: Inter, sans-serif;
+				font-family: Nerik, sans-serif;
 				font-size: x-large;
 			}
 
