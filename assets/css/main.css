@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap');
 
 @font-face {
 	font-family: "Nerik";
@@ -27,6 +28,8 @@
 	--distance2: 50%;
 	--color1: #6be89b;
 	--color2: #0076a5;
+	--secondary-color: #d35b0d;
+	--secondary-transparent: #d35b0d80;
 }
 
 html, body, div, span, applet, object,
@@ -268,19 +271,18 @@ em, i {
 }
 
 p {
-	margin: 0 0 2em 0;
+	margin: 0 0 1em 0;
 	font-family: Whitney, sans-serif;
 }
 
 h1 {
-	font-size: 4em;
-	font-family: 'Black Ops One', cursive;
+	font-size: 4.5em;
+	font-family: Chakra Petch, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	color: #ffffff;
 	font-weight: 700;
-	margin: 0 0 1em 0;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -298,6 +300,7 @@ h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
 	border-bottom: solid 2px rgba(255, 255, 255, 0.125);
 	padding-top: 1em;
 	border-top: solid 2px rgba(255, 255, 255, 0.125);
+	margin-bottom: 1em;
 }
 
 h2 {
@@ -2900,7 +2903,7 @@ button,
 	-webkit-transition: background-color 0.2s ease-in-out;
 	-ms-transition: background-color 0.2s ease-in-out;
 	transition: background-color 0.2s ease-in-out;
-	background-color: transparent;
+	background-color: var(--secondary-color);
 	border-radius: 5px;
 	border: 0;
 	box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.125);
@@ -2925,7 +2928,7 @@ input[type="reset"]:hover,
 input[type="button"]:hover,
 button:hover,
 .button:hover {
-	background-color: rgba(255, 255, 255, 0.025);
+	background-color: var(--secondary-transparent);
 }
 
 input[type="submit"]:active,
@@ -2933,7 +2936,7 @@ input[type="reset"]:active,
 input[type="button"]:active,
 button:active,
 .button:active {
-	background-color: rgba(255, 255, 255, 0.075);
+	background-color: var(--secondary-transparent);
 }
 
 input[type="submit"].icon:before,
@@ -2950,8 +2953,10 @@ input[type="reset"].primary,
 input[type="button"].primary,
 button.primary,
 .button.primary {
-	background-color: #5865f2;
-	box-shadow: none;
+	background-color: transparent;
+	border-radius: 5px;
+	border: 0;
+	box-shadow: inset 0 0 0 2px var(--secondary-color);
 }
 
 input[type="submit"].primary:hover,
@@ -2959,7 +2964,7 @@ input[type="reset"].primary:hover,
 input[type="button"].primary:hover,
 button.primary:hover,
 .button.primary:hover {
-	background-color: #53639e;
+	background-color: var(--secondary-transparent);
 }
 
 input[type="submit"].primary:active,
@@ -2967,7 +2972,7 @@ input[type="reset"].primary:active,
 input[type="button"].primary:active,
 button.primary:active,
 .button.primary:active {
-	background-color: #45558d;
+	background-color: var(--secondary-transparent);
 }
 
 input[type="submit"].primary.icon:before,
@@ -3138,7 +3143,7 @@ button:disabled,
 
 #header h1 a {
 	border: 0;
-	font-family: 'Black Ops One', cursive;
+	font-family: 'Chakra Petch', sans-serif;
 	font-size: x-large;
 }
 
@@ -3171,6 +3176,7 @@ button:disabled,
 }
 
 #header nav a[href="#menu"] {
+	background-color: var(--secondary-color);
 	text-decoration: none;
 	-moz-transition: background-color 0.2s ease-in-out;
 	-webkit-transition: background-color 0.2s ease-in-out;
@@ -3200,11 +3206,11 @@ button:disabled,
 }
 
 #header nav a[href="#menu"]:hover {
-	background-color: rgba(255, 255, 255, 0.025);
+	background-color: var(--secondary-transparent);
 }
 
 #header nav a[href="#menu"]:active {
-	background-color: rgba(255, 255, 255, 0.075);
+	background-color: var(--secondary-transparent);
 }
 
 #header.alt {
@@ -3324,7 +3330,7 @@ button:disabled,
 	-ms-transition: opacity 0.35s ease, -ms-transform 0.35s ease;
 	transition: opacity 0.35s ease, transform 0.35s ease;
 	-webkit-overflow-scrolling: touch;
-	background: #509dd3;
+	background: #31343b;
 	border-radius: 5px;
 	display: block;
 	max-width: 100%;
@@ -3380,7 +3386,7 @@ button:disabled,
 }
 
 #menu .links li a:hover {
-	background: #0a64a4;
+	background: #509dd3;
 }
 
 @media screen and (max-width: 736px) {
@@ -3421,7 +3427,7 @@ body.is-menu-visible #menu .inner {
 /* Banner */
 
 #banner {
-	padding: 10em 0 4.75em 0 ;
+	padding: 6em 0 4.75em 0 ;
 	text-align: center;
 }
 
@@ -3440,7 +3446,6 @@ body.is-menu-visible #menu .inner {
 	-ms-transform: translateY(0);
 	transform: translateY(0);
 	opacity: 1;
-	margin: 0 0 1.3em 0;
 }
 
 #banner .logo .icon {
@@ -3545,7 +3550,7 @@ body.is-menu-visible #menu .inner {
 	}
 
 	#banner .logo .icon {
-		font-size: 1.5em;
+		font-size: 3em;
 	}
 
 	#banner h2 {
